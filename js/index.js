@@ -45,4 +45,5 @@ let links = document.querySelectorAll("header nav a")
 for(let i = 0; i< links.length;i++){
   links[i].innerHTML = siteContent.nav[`nav-item-${i + 1}`]
 }
-
+document.querySelector('.cta h1').textContent = siteContent.cta.h1
+document.querySelector('.cta button').textContent = siteContent.cta.button
