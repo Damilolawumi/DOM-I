@@ -50,3 +50,7 @@ document.querySelector('.cta button').textContent = siteContent.cta.button
 
 let ctaImage = document.getElementById("cta-img");
 ctaImage.setAttribute('src', siteContent["cta"]["img-src"])
+
+let mainContentH4s  = document.querySelectorAll('.main-content h4');
+
+mainContentH4s[0].textContent = siteContent['main-content']['features-h4']
