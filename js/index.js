@@ -41,5 +41,8 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let topHead = document.querySelector('nav');
-topHead.textContent = ['Services','Product', 'Vision', 'Features', 'About', 'Contact' ]
+let links = document.querySelectorAll("header nav a")
+for(let i = 0; i< links.length;i++){
+  links[i].innerHTML = siteContent.nav[`nav-item-${i + 1}`]
+}
+
