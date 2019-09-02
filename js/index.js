@@ -47,3 +47,6 @@ for(let i = 0; i< links.length;i++){
 }
 document.querySelector('.cta h1').textContent = siteContent.cta.h1
 document.querySelector('.cta button').textContent = siteContent.cta.button
+
+let ctaImage = document.getElementById("cta-img");
+ctaImage.setAttribute('src', siteContent["cta"]["img-src"])
