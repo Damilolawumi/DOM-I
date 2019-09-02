@@ -54,3 +54,18 @@ ctaImage.setAttribute('src', siteContent["cta"]["img-src"])
 let mainContentH4s  = document.querySelectorAll('.main-content h4');
 
 mainContentH4s[0].textContent = siteContent['main-content']['features-h4']
+mainContentH4s[1].textContent = siteContent['main-content']['about-h4']
+mainContentH4s[2].textContent = siteContent['main-content']['services-h4']
+mainContentH4s[3].textContent = siteContent['main-content']['product-h4']
+mainContentH4s[4].textContent = siteContent['main-content']['vision-h4']
+
+
+let mainContentParagraphs  = document.querySelectorAll('.main-content p');
+mainContentParagraphs[0].textContent = siteContent['main-content']['features-content']
+mainContentParagraphs[1].textContent = siteContent['main-content']['about-content']
+mainContentParagraphs[2].textContent = siteContent['main-content']['services-content']
+mainContentParagraphs[3].textContent = siteContent['main-content']['product-content']
+mainContentParagraphs[4].textContent = siteContent['main-content']['vision-content']
+
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
