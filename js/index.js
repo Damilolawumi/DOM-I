@@ -44,9 +44,13 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let links = document.querySelectorAll("header nav a")
 for(let i = 0; i< links.length;i++){
   links[i].innerHTML = siteContent.nav[`nav-item-${i + 1}`]
+  links[i].style.color = "green"
 }
+
+
 document.querySelector('.cta h1').textContent = siteContent.cta.h1
 document.querySelector('.cta button').textContent = siteContent.cta.button
+
 
 let ctaImage = document.getElementById("cta-img");
 ctaImage.setAttribute('src', siteContent["cta"]["img-src"])
@@ -71,6 +75,9 @@ let middleImage = document.getElementById("middle-img");
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 let contactDetails = document.querySelectorAll('.contact p')
+
+console.log(siteContent.contact.address)
+
 contactDetails[0].textContent = siteContent.contact.address;
 contactDetails[1].textContent = siteContent.contact.phone;
 contactDetails[2].textContent = siteContent.contact.email;
@@ -78,3 +85,19 @@ document.querySelector('.contact h4').textContent = siteContent.contact['contact
 
 let footer = document.querySelector('footer p')
 footer.textContent = siteContent.footer.copyright
+
+let additionalLink = document.createElement('a');
+additionalLink.textContent = 'Support';
+additionalLink.style.color = 'green'
+
+
+let nav = document.querySelector('nav');
+nav.appendChild(additionalLink);
+
+
+let extraLink = document.createElement('a');
+extraLink.textContent = 'News'
+extraLink.style.color = 'green'
+
+let newNav = document.querySelector('nav');
+newNav.prepend(extraLink);    
