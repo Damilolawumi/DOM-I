@@ -69,3 +69,12 @@ mainContentParagraphs[4].textContent = siteContent['main-content']['vision-conte
 
 let middleImage = document.getElementById("middle-img");
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+let contactDetails = document.querySelectorAll('.contact p')
+contactDetails[0].textContent = siteContent.contact.address;
+contactDetails[1].textContent = siteContent.contact.phone;
+contactDetails[2].textContent = siteContent.contact.email;
+document.querySelector('.contact h4').textContent = siteContent.contact['contact-h4'];
+
+let footer = document.querySelector('footer p')
+footer.textContent = siteContent.footer.copyright
