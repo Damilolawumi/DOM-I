@@ -40,3 +40,64 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let links = document.querySelectorAll("header nav a")
+for(let i = 0; i< links.length;i++){
+  links[i].innerHTML = siteContent.nav[`nav-item-${i + 1}`]
+  links[i].style.color = "green"
+}
+
+
+document.querySelector('.cta h1').textContent = siteContent.cta.h1
+document.querySelector('.cta button').textContent = siteContent.cta.button
+
+
+let ctaImage = document.getElementById("cta-img");
+ctaImage.setAttribute('src', siteContent["cta"]["img-src"])
+
+let mainContentH4s  = document.querySelectorAll('.main-content h4');
+
+mainContentH4s[0].textContent = siteContent['main-content']['features-h4']
+mainContentH4s[1].textContent = siteContent['main-content']['about-h4']
+mainContentH4s[2].textContent = siteContent['main-content']['services-h4']
+mainContentH4s[3].textContent = siteContent['main-content']['product-h4']
+mainContentH4s[4].textContent = siteContent['main-content']['vision-h4']
+
+
+let mainContentParagraphs  = document.querySelectorAll('.main-content p');
+mainContentParagraphs[0].textContent = siteContent['main-content']['features-content']
+mainContentParagraphs[1].textContent = siteContent['main-content']['about-content']
+mainContentParagraphs[2].textContent = siteContent['main-content']['services-content']
+mainContentParagraphs[3].textContent = siteContent['main-content']['product-content']
+mainContentParagraphs[4].textContent = siteContent['main-content']['vision-content']
+
+let middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+let contactDetails = document.querySelectorAll('.contact p')
+
+console.log(siteContent.contact.address)
+
+contactDetails[0].textContent = siteContent.contact.address;
+contactDetails[1].textContent = siteContent.contact.phone;
+contactDetails[2].textContent = siteContent.contact.email;
+document.querySelector('.contact h4').textContent = siteContent.contact['contact-h4'];
+
+let footer = document.querySelector('footer p')
+footer.textContent = siteContent.footer.copyright
+
+let additionalLink = document.createElement('a');
+additionalLink.textContent = 'Support';
+additionalLink.style.color = 'green'
+
+
+let nav = document.querySelector('nav');
+nav.appendChild(additionalLink);
+
+
+let extraLink = document.createElement('a');
+extraLink.textContent = 'News'
+extraLink.style.color = 'green'
+
+let newNav = document.querySelector('nav');
+newNav.prepend(extraLink);    
